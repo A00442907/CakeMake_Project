@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\js\Records.jsx" />
+    <Content Remove="wwwroot\js\Recorsds.jsx" />
   </ItemGroup>
 
   <ItemGroup>
