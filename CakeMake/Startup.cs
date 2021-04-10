@@ -37,10 +37,13 @@ namespace CakeMake
             services.AddScoped<ICakeRepository, CakeRepository>();
             services.AddScoped<ShoppingCart>(sc => ShoppingCart.GetCart(sc));
             services.AddScoped<IOrderRepository, OrderRepository>();
+            services.AddScoped<Transaction>(trans => Transaction.GetTransaction(trans));
 
             services.AddHttpContextAccessor();
             services.AddSession();
             services.AddRazorPages();
+
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -50,6 +53,7 @@ namespace CakeMake
             {
                 app.UseDeveloperExceptionPage();
             }
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSession();

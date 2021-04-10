@@ -40,5 +40,11 @@ namespace CakeMake.Models
 
             _appDbContext.SaveChanges();
         }
+
+        public void CreateOrder(Payment payment)
+        {
+            _appDbContext.Payments.Add(payment);
+            _appDbContext.SaveChanges();
+        }
     }
 }

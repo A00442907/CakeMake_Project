@@ -39,10 +39,28 @@ namespace CakeMake.Controllers
             {
                 _orderRepository.CreateOrder(order);
                 _shoppingCart.ClearCart();
-                return RedirectToAction("CheckoutComplete");
+                return RedirectToAction("Payment");
             }
 
             return View(order);
+        }
+
+        public IActionResult Payment()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Payment(Payment payment)
+        {
+
+            if (ModelState.IsValid)
+            {
+                _orderRepository.CreateOrder(payment);
+                return RedirectToAction("CheckoutComplete");
+            }
+
+            return View(payment);
         }
 
         public IActionResult CheckoutComplete()
