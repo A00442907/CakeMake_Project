@@ -2,8 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
+    <AspNetCoreHostingModel>OutOfProcess</AspNetCoreHostingModel>
+    <AspNetCoreModuleName>AspNetCoreModule</AspNetCoreModuleName>
   </PropertyGroup>
-
+   
   <ItemGroup>
     <Content Remove="wwwroot\js\Recorsds.jsx" />
   </ItemGroup>
