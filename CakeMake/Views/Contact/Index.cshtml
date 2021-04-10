@@ -1,3 +1,24 @@
-﻿<h3>Please contact us sending email using the email link below</h3>
+﻿<html>
+<body>
+    <div id="content"></div>
 
-<email address="info@cakeshop.com" link-text="contact us"></email>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="~/lib/bootstrap/js/npm.js"></script>
+    <script src="~/lib/react/umd/react.production.min.js"></script>
+    <script src="~/lib/react-dom/umd/react-dom.production.min.js"></script>
+    <script src="~/lib/babel-standalone/babel.min.js"></script>
+   
+
+     @section Scripts {
+         <script type="text/babel">
+             let mydom = <div><h3>Please contact us sending email using the email link below</h3>
+             <p><a href="mailto:info@cakeshop.com">info@cakeshop.com</a></p></div>
+
+             ReactDOM.render(mydom, document.getElementById("content"))
+         </script>
+    }
+    
+
+</body>
+
+</html>
